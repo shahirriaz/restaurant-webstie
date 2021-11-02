@@ -1,10 +1,10 @@
+import Example from './components/Example'
+
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-      Greetings
-      </header>
+    <Example />  
     </div>
   );
 }

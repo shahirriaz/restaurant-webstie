@@ -1,9 +1,10 @@
 ## How to initialize project
 
-Clone the repository and run `npm install` in the terminal to install the node modules and dependencies
+* Clone the repository and run `npm install` in the terminal to install the node modules and dependencies
+* Run `npm start` to start local developent server
+
 
 ### Objective
-
 * Case to solve: Pizzeria Bella online food ordering system
 
 ### Requirements
