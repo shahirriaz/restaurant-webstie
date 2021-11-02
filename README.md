@@ -7,12 +7,12 @@ Clone the repository and run `npm install` in the terminal to install the node m
 * Case to solve: Pizzeria Bella online food ordering system
 
 ### Requirements
- [ ] Be able to present an overview of Pizz and Pasta products that you can order
- [ ] Be able to add products to shopping cart and present the total number of ordered items and total price
- [ ] Shopping cart is editable, i.e., edit quantity of products, delete products, etc.
- [ ] Be able to place an order
- [ ] Be able to navigate between web pages and edit your order before final order is placed
- [ ] And other selective features you think practical in this context. For example, a dropdown cart menu; or side dishes suggestions while ordering.
+ * [ ] Be able to present an overview of Pizz and Pasta products that you can order
+ * [ ] Be able to add products to shopping cart and present the total number of ordered items and total price
+ * [ ] Shopping cart is editable, i.e., edit quantity of products, delete products, etc.
+ * [ ] Be able to place an order
+ * [ ] Be able to navigate between web pages and edit your order before final order is placed
+ * [ ] And other selective features you think practical in this context. For example, a dropdown cart menu; or side dishes suggestions while ordering.
  __Strong text__ or **None of the functionalities requires backend**
 
 ### Website layout
