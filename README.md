@@ -1,7 +1,7 @@
 ## How to initialize project
 
 * Clone the repository and run `npm install` in the terminal to install the node modules and dependencies
-* Run `npm start` to start local developent server
+* Run `npm start` to start local development server
 
 
 ### Objective
