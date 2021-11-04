@@ -1,10 +1,10 @@
-import Example from './components/Example'
+import HomePage from "./pages/HomePage/HomePage";
 
 
 function App() {
   return (
     <div className="App">
-    <Example />  
+      <HomePage />
     </div>
   );
 }
