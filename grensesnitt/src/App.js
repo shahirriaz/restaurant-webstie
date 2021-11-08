@@ -1,5 +1,5 @@
 // import HomePage from "./components/HomePage";
-import HomePage from "pages/HomePage/HomePage";
+import HomePage from "Page/HomePage/HomePage";
 import "./App.css"
 
 
@@ -14,7 +14,7 @@ import "./App.css"
 function App() {
   return (
     <div className="App">
-      {/* <HomePage /> */}
+      <HomePage /> 
     </div>
   );
 }

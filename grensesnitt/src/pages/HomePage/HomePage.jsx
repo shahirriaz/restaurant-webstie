@@ -1,7 +1,6 @@
 import "./HomePage.css"
 import React from 'react'
-// import Header from "components/common/Header"
-// import Header from "@/components/common/Header/Header"
+ import Header from "Component/common/Header/Header"
 
 
 
@@ -11,7 +10,7 @@ import React from 'react'
 function HomePage() {
     return (
         <div className="homepage">
-             <Header />
+            <Header />
             {/* <h1 className="homePage__heading">I am homepage</h1> */}
            
         </div>
