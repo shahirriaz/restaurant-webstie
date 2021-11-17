@@ -1,10 +1,11 @@
-.cards {
+.about
+ {
   padding: 4rem;
   background-color: #f2faf2;
   height: 80vw;
 }
 
-.cards__container {
+.about__container {
   position: relative;
   display: flex;
   left: -200px;
@@ -62,7 +63,7 @@ h5 {
 }
 
 @media only screen and (max-width: 1200px) {
-  .cards__container {
+  .about__container {
     position: relative;
     max-width: 550px;
     left: -20vh;
@@ -83,13 +84,14 @@ h5 {
 }
 
 @media only screen and (min-width: 1200px) {
-  .cards__container {
+  .about
+  __container {
     width: 90%;
   }
 }
 
 @media only screen and (max-width: 1024px) {
-  .cards__container {
+  .about__container {
     position: relative;
     max-width: 350px;
     left: -140px;
@@ -111,7 +113,7 @@ h5 {
 }
 
 @media only screen and (max-width: 500px) {
-  .cards__container {
+  .about__container {
     position: relative;
     max-width: 250px;
     left: -5vh;

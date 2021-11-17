@@ -1,6 +1,6 @@
 import React from 'react';
 import '../../App.css';
-import Cards from '../Cards';
+import About from '../About';
 import HeroSection from '../HeroSection';
 import Menu from '../Menu';
 import Footer from '../Footer';
@@ -10,7 +10,7 @@ function Home() {
   return (
     <>
       <HeroSection />
-      <Cards />
+      <About />
       <Menu />
       <Footer />
     </>

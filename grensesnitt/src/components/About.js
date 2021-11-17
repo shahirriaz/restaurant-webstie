@@ -1,10 +1,10 @@
 import React from "react";
-import "./Cards.css";
+import "./About.css";
 
-function Cards() {
+function About() {
   return (
-    <div className="cards">
-      <div className="cards__container">
+    <div className="about">
+      <div className="about__container">
         <div cards__text>
           <h1>Pizzeria Bella åpnet i mars 2020</h1>
           <h4>
@@ -62,4 +62,4 @@ function Cards() {
   );
 }
 
-export default Cards;
+export default About;
