@@ -12,6 +12,18 @@ const scrollToMenu = () => {
   });
 };
 
+const yOffset = -10;
+//const element = document.getElementsByClassName("about");
+//const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
+
+const scrollToAboutUs = () => {
+  scroller.scrollTo("about", {
+    duration: 800,
+    delay: 0,
+    smooth: "easeInOutQuart",
+  });
+};
+
 function Navbar() {
   const [click, setClick] = useState(false);
   const [button, setButton] = useState(true);
@@ -39,12 +51,20 @@ function Navbar() {
         <div className="navbar-container">
           <ul className={click ? "nav-menu-1 active" : "nav-menu-1"}>
             <li className="nav-item">
-              <Link to="/" className="nav-links" onClick={closeMobileMenu}>
+              <Link
+                to="/"
+                className="nav-links"
+                onClick={(closeMobileMenu, scrollToAboutUs)}
+              >
                 OM OSS
               </Link>
             </li>
             <li className="nav-item">
-              <Link to="/" className="nav-links" onClick={scrollToMenu}>
+              <Link
+                to="/"
+                className="nav-links"
+                onClick={(closeMobileMenu, scrollToMenu)}
+              >
                 MENY
               </Link>
             </li>

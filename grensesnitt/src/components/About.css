@@ -1,8 +1,9 @@
-.about
- {
+.about {
+  display: flex;
+  flex-direction: column;
   padding: 4rem;
   background-color: #f2faf2;
-  height: 80vw;
+  height: 62vw;
 }
 
 .about__container {
@@ -10,11 +11,13 @@
   display: flex;
   left: -200px;
   flex-flow: column;
-  align-items: flex-start;
+  align-items: flex-end;
   max-width: 1320px;
   width: 90%;
-  margin: 0 auto;
+  height: 100vh;
+  margin: 10rem auto;
   flex-wrap: wrap;
+  margin-left: 20vw;
 }
 
 h1 {
@@ -36,19 +39,12 @@ h4 {
 }
 
 .contact__info {
-  position: relative;
   display: flex;
   flex-direction: column;
   align-items: start;
-  position: relative;
-  width: 300px;
-  height: 900px;
-  border-color: red;
-  border-style: solid;
-  padding-left: 30px;
   color: red;
-  left: 100%;
-  bottom: 81vh;
+  margin-left: 10vw;
+  margin-right: 5vw;
 }
 
 h3 {
@@ -84,8 +80,7 @@ h5 {
 }
 
 @media only screen and (min-width: 1200px) {
-  .about
-  __container {
+  .about __container {
     width: 90%;
   }
 }
