@@ -1,6 +1,15 @@
-import React from 'react';
-import '../../App.css';
+import React from "react";
+import "../../App.css";
+import CartItems from "../CartItems";
+import Footer from "../Footer";
 
-export default function Cart() {
-  return <h1 className='cart'>cart</h1>;
+function Cart() {
+  return (
+    <>
+      <CartItems />
+      <Footer />
+    </>
+  );
 }
+
+export default Cart;

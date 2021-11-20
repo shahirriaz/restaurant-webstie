@@ -140,7 +140,7 @@ function Menu() {
             Legg til
           </Button>
         </div>
-        <div className="pizza-item">
+        <div className="pizza-item last-pizza-item">
           <h3>MARGHERITA</h3>
           <p>Tomatsaus, fersk mozzarella og fersk basilikum.</p> 
           <p>119,-/149</p>
