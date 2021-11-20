@@ -74,7 +74,11 @@ function Navbar() {
               </Link>
             </li>
             <li className="nav-item">
-              <Link to="/cart" className="nav-links" onClick={closeMobileMenu}>
+              <Link
+                to="/cart"
+                className="nav-links"
+                onClick={(closeMobileMenu, scrollToTop)}
+              >
                 <i class="fas fa-shopping-cart"></i>
               </Link>
             </li>
