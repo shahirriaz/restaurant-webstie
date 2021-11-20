@@ -4,6 +4,15 @@ import { Link } from "react-router-dom";
 import "./Navbar.css";
 import { scroller } from "react-scroll";
 
+const scrollToTop = () => {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth",
+    /* you can also use 'auto' behaviour
+       in place of 'smooth' */
+  });
+};
+
 const scrollToMenu = () => {
   scroller.scrollTo("menu-container", {
     duration: 800,
@@ -11,10 +20,6 @@ const scrollToMenu = () => {
     smooth: "easeInOutQuart",
   });
 };
-
-const yOffset = -10;
-//const element = document.getElementsByClassName("about");
-//const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
 
 const scrollToAboutUs = () => {
   scroller.scrollTo("about", {
@@ -74,7 +79,7 @@ function Navbar() {
               </Link>
             </li>
           </ul>
-          <Link to="/" onClick={closeMobileMenu}>
+          <Link to="/" onClick={(closeMobileMenu, scrollToTop)}>
             <img
               src="images/pizzeria_bella.png"
               id="logo"
