@@ -42,6 +42,10 @@ export const biffPrice = (basket) => {
   return reducedBiffPrice;
 };
 
+export const getTotalPrice = (basket) => {
+  return basket?.reduce((amount, item) => item.price + amount, 0);
+}
+
 const reducer = (state, action) => {
   console.log(action);
   switch (action.type) {
