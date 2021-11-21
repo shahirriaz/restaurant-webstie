@@ -1,9 +1,49 @@
 export const initialState = {
-    basket: [],
+  basket: [],
+};
+
+export const MARGARITAOccurrences = (basket) => {
+  return basket?.reduce((a, b) => (a += b.title == "MARGARITA" ? 1 : 0), 0);
+};
+
+export const KYLLINGOccurrences = (basket) => {
+  return basket?.reduce((a, b) => (a += b.title == "KYLLING" ? 1 : 0), 0);
+};
+
+export const BIFFOccurrences = (basket) => {
+  return basket?.reduce((a, b) => (a += b.title == "BIFF" ? 1 : 0), 0);
+};
+
+export const margaritaPrice = (basket) => {
+  const margaritaArray = basket.filter((title) => title.title === "MARGARITA");
+  const reducedMargaritaPrice = margaritaArray.reduce(
+    (amount, item) => item.price + amount,
+    0
+  );
+  return reducedMargaritaPrice;
+};
+
+export const kyllingPrice = (basket) => {
+  const kyllingArray = basket.filter((title) => title.title === "KYLLING");
+  const reducedkyllingPrice = kyllingArray.reduce(
+    (amount, item) => item.price + amount,
+    0
+  );
+  return reducedkyllingPrice;
+};
+
+export const biffPrice = (basket) => {
+  const biffArray = basket.filter((title) => title.title === "BIFF");
+  const reducedBiffPrice = biffArray.reduce(
+    (amount, item) => item.price + amount,
+    0
+  );
+
+  return reducedBiffPrice;
 };
 
 const reducer = (state, action) => {
-   console.log(action)
+  console.log(action);
   switch (action.type) {
     case "ADD_TO_BASKET":
       return {
