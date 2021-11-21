@@ -76,45 +76,6 @@ function CartItems() {
         </Link>
       </div>
     </div>
-    // <div className="cart-container">
-    //   <div className="cart-header">
-    //     <h4>PLATE</h4>
-    //     {basket.map((cartItem, index) => (
-    //       <div className="cart-header-element">
-    //         <CheckoutProduct
-    //           key={index}
-    //           title={cartItem.title}
-    //           desc={cartItem.desc}
-    //           price={cartItem.price}
-    //         />
-    //       </div>
-    //     ))}
-    //     <div className="cart-header-element">
-    //       <h4>QUANTITY</h4>
-    //       <p className="cart-item"></p>
-    //       {/* <p className="cart-item">2</p>
-    //       <p className="cart-item">1</p> */}
-    //     </div>
-
-    //     <div className="cart-header-element">
-    //       <h4>PRICE</h4>
-    //       <p className="cart-item">149,-</p>
-    //       <p className="cart-item">298,-</p>
-    //       <p className="cart-item">49,-</p>
-    //     </div>
-    //   </div>
-    //   <div className="checkout">
-    //     <Link to="/Order">
-    //       <Button
-    //         className="btns"
-    //         buttonStyle="btn--outline"
-    //         buttonSize="btn--large"
-    //       >
-    //         CHECKOUT
-    //       </Button>
-    //     </Link>
-    //   </div>
-    // </div>
   );
 }
 
