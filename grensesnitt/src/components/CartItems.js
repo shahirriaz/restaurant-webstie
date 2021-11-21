@@ -12,6 +12,7 @@ import {
   margaritaPrice,
   kyllingPrice,
   biffPrice,
+  getTotalPrice,
 } from "../reducer";
 
 
@@ -36,9 +37,9 @@ function CartItems() {
 
         <div className="cart-header-element">
           <h4>PRICE</h4>
-          <p className="cart-item">{margaritaPrice(basket)}</p>
-          <p className="cart-item">{kyllingPrice(basket)}</p>
-          <p className="cart-item">{biffPrice(basket)}</p>
+          <p className="cart-item">kr {margaritaPrice(basket)}</p>
+          <p className="cart-item">kr {kyllingPrice(basket)}</p>
+          <p className="cart-item">kr {biffPrice(basket)}</p>
         </div>
       </div>
       <div className="checkout">
@@ -48,7 +49,7 @@ function CartItems() {
             buttonStyle="btn--outline"
             buttonSize="btn--large"
           >
-            CHECKOUT
+            <span>CHECKOUT - Total kr {getTotalPrice(basket)}-,</span>
           </Button>
         </Link>
       </div>
