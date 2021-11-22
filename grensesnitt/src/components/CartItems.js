@@ -15,9 +15,23 @@ import {
   getTotalPrice,
 } from "../reducer";
 
-
 function CartItems() {
-  const [{ basket, user }, dispatch] = useStateValue();
+  const [{ basket }, dispatch] = useStateValue();
+
+  const removeFromBasket = () => {
+    console.log(basket[0]?.id);
+    // dispatch the removal of item into the data layer
+    // --> make reducer make it happen :D
+    dispatch({
+      type: "REMOVE_FROM_BASKET",
+      id: basket[0]?.id, //only need id of product to remove it right?
+    });
+  };
+  const addToBasketWithPlusSign = () => {
+    //IF THERE IS SOMETHING IN BASKET, JUST MULTIPLY IT
+
+  };
+
   return (
     <div className="cart-container">
       <div className="cart-header">
@@ -30,9 +44,37 @@ function CartItems() {
 
         <div className="cart-header-element">
           <h4>QUANTITY</h4>
-          <p className="cart-item">{MARGARITAOccurrences(basket)}</p>
-          <p className="cart-item">{KYLLINGOccurrences(basket)}</p>
-          <p className="cart-item">{BIFFOccurrences(basket)}</p>
+          <p className="cart-item">
+            <i
+              onClick={removeFromBasket}
+              style={{ paddingRight: "1rem" }}
+              class="fas fa-minus-square"
+            ></i>
+            {MARGARITAOccurrences(basket)}
+            <i
+              onClick={addToBasketWithPlusSign}
+              style={{ paddingLeft: "1rem" }}
+              class="fas fa-plus-square"
+            ></i>
+          </p>
+          <p className="cart-item">
+            <i
+              onClick={removeFromBasket}
+              style={{ paddingRight: "1rem" }}
+              class="fas fa-minus-square"
+            ></i>
+            {KYLLINGOccurrences(basket)}
+            <i style={{ paddingLeft: "1rem" }} class="fas fa-plus-square"></i>
+          </p>
+          <p className="cart-item">
+            <i
+              onClick={removeFromBasket}
+              style={{ paddingRight: "1rem" }}
+              class="fas fa-minus-square"
+            ></i>
+            {BIFFOccurrences(basket)}
+            <i style={{ paddingLeft: "1rem" }} class="fas fa-plus-square"></i>
+          </p>
         </div>
 
         <div className="cart-header-element">

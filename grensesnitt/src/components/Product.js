@@ -2,14 +2,17 @@ import React from "react";
 import { Button } from "./Button";
 import "./Menu.css";
 import { useStateValue } from "../StateProvider";
+import { useEffect } from "react";
 
-function Product({ typeOfProduct, title, desc, price }) {
+function Product({ id, typeOfProduct, title, desc, price }) {
   const [state, dispatch] = useStateValue();
 
   const addToBasket = () => {
+    // console.log(id)
     dispatch({
       type: "ADD_TO_BASKET",
       item: {
+        id: id,
         title: title,
         desc: desc,
         price: price,
