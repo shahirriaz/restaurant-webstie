@@ -40,11 +40,31 @@
   position: relative;
   top: 1vw;
   color: black;
-  border-color: red;
+  /* border-color: red; */
 }
 
 .checkout button:hover {
   opacity: 70%;
-  background-color: red;
+  /* background-color: red; */
   color: #fff;
 }
+
+
+
+.list-product{
+  /* border: 1px solid blue; */
+  display: flex;
+  width: 50%;
+  justify-content: space-between;
+}
+
+/* .cart-item-input > input {
+  border: 0;
+   width: 50px;
+}
+
+.cart-item-input {
+  border: 1px solid lightgray;
+  border-radius: 5px;
+  width: 50px;
+} */

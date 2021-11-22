@@ -21,6 +21,8 @@ function Product({ id, typeOfProduct, title, desc, price }) {
     // console.log("kk")
   };
 
+  
+
   return (
     <div className={`${typeOfProduct}-item`}>
       <h3>{title}</h3>

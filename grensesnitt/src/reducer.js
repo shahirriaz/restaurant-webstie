@@ -44,17 +44,32 @@ export const biffPrice = (basket) => {
 
 export const getTotalPrice = (basket) => {
   return basket?.reduce((amount, item) => item.price + amount, 0);
-}
+};
 
 const reducer = (state, action) => {
   console.log(action);
   switch (action.type) {
     case "ADD_TO_BASKET":
+      const itemIndex = state.basket.findIndex(
+        (basketItem) => basketItem.id == action.item.id
+      );
+
+      let updatedBasket = [...state.basket];
+
+      if (itemIndex >= 0) {
+        // console.log("lloo");
+        state.basket[itemIndex].cartQuantity += 1;
+      } else {
+        // console.log("neii")
+        const tempProduct = { ...action.item, cartQuantity: 1 };
+        updatedBasket.push(tempProduct);
+      }
       return {
         ...state, //just remember to always return the current global state
         //spread the current basket state and add a new item
-        basket: [...state.basket, action.item],
+        basket: updatedBasket,
       };
+
     case "REMOVE_FROM_BASKET":
       //fint the first ELEMENT that matches the id (condition)
       const index = state.basket.findIndex(

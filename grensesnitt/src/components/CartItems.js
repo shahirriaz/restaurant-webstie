@@ -19,71 +19,49 @@ function CartItems() {
   const [{ basket }, dispatch] = useStateValue();
 
   const removeFromBasket = () => {
-    console.log(basket[0]?.id);
+    console.log(basket);
     // dispatch the removal of item into the data layer
     // --> make reducer make it happen :D
     dispatch({
       type: "REMOVE_FROM_BASKET",
-      id: basket[0]?.id, //only need id of product to remove it right?
+      id: basket[0]?.id, //only need id of product to remove it right? PROBLEEEEEEM
     });
   };
   const addToBasketWithPlusSign = () => {
     //IF THERE IS SOMETHING IN BASKET, JUST MULTIPLY IT
-
   };
+
+  //   <p className="cart-item">{MARGARITAOccurrences(basket)}</p>
+  // <p className="cart-item">{KYLLINGOccurrences(basket)}</p>
+  // <p className="cart-item">{BIFFOccurrences(basket)}</p>
+
+  //         <p className="cart-item">kr {margaritaPrice(basket)}</p>
+  // <p className="cart-item">kr {kyllingPrice(basket)}</p>
+  // <p className="cart-item">kr {biffPrice(basket)}</p>
 
   return (
     <div className="cart-container">
       <div className="cart-header">
         <div className="cart-header-element">
           <h4>PLATE</h4>
-          <p className="cart-item">MARGHERITA</p>
-          <p className="cart-item">KYLLING</p>
-          <p className="cart-item">BIFF</p>
         </div>
-
         <div className="cart-header-element">
           <h4>QUANTITY</h4>
-          <p className="cart-item">
-            <i
-              onClick={removeFromBasket}
-              style={{ paddingRight: "1rem" }}
-              class="fas fa-minus-square"
-            ></i>
-            {MARGARITAOccurrences(basket)}
-            <i
-              onClick={addToBasketWithPlusSign}
-              style={{ paddingLeft: "1rem" }}
-              class="fas fa-plus-square"
-            ></i>
-          </p>
-          <p className="cart-item">
-            <i
-              onClick={removeFromBasket}
-              style={{ paddingRight: "1rem" }}
-              class="fas fa-minus-square"
-            ></i>
-            {KYLLINGOccurrences(basket)}
-            <i style={{ paddingLeft: "1rem" }} class="fas fa-plus-square"></i>
-          </p>
-          <p className="cart-item">
-            <i
-              onClick={removeFromBasket}
-              style={{ paddingRight: "1rem" }}
-              class="fas fa-minus-square"
-            ></i>
-            {BIFFOccurrences(basket)}
-            <i style={{ paddingLeft: "1rem" }} class="fas fa-plus-square"></i>
-          </p>
         </div>
-
         <div className="cart-header-element">
           <h4>PRICE</h4>
-          <p className="cart-item">kr {margaritaPrice(basket)}</p>
-          <p className="cart-item">kr {kyllingPrice(basket)}</p>
-          <p className="cart-item">kr {biffPrice(basket)}</p>
         </div>
       </div>
+      {basket.map((item, index) => (
+        <div className="list-product">
+          <CheckoutProduct
+            key={index}
+            id={item.id}
+            title={item.title}
+            price={item.price}
+          />
+        </div>
+      ))}
       <div className="checkout">
         <Link to="/Order">
           <Button
