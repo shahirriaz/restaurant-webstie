@@ -10,6 +10,7 @@ import Product from "./Product";
     {
       item: (
         <Product
+          id={1}
           typeOfProduct="pizza"
           title="MARGARITA"
           desc="Tomatsaus, fersk mozzarella og fersk basilikum."
@@ -20,6 +21,7 @@ import Product from "./Product";
     {
       item: (
         <Product
+          id={2}
           typeOfProduct="pizza"
           title="BIFF"
           desc="Tomatsaus, fersk mozzarella og fersk basilikum."
@@ -30,6 +32,7 @@ import Product from "./Product";
     {
       item: (
         <Product
+          id={3}
           typeOfProduct="pizza"
           title="KYLLING"
           desc="Tomatsaus, fersk mozzarella og fersk basilikum."
@@ -40,6 +43,7 @@ import Product from "./Product";
     {
       item: (
         <Product
+          id={4}
           typeOfProduct="pizza"
           title="MARGARITA"
           desc="Tomatsaus, fersk mozzarella og fersk basilikum."
@@ -50,6 +54,7 @@ import Product from "./Product";
     {
       item: (
         <Product
+          id={5}
           typeOfProduct="pizza"
           title="MARGARITA"
           desc="Tomatsaus, fersk mozzarella og fersk basilikum."
@@ -60,6 +65,7 @@ import Product from "./Product";
     {
       item: (
         <Product
+          id={6}
           typeOfProduct="pizza"
           title="MARGARITA"
           desc="Tomatsaus, fersk mozzarella og fersk basilikum."
@@ -70,6 +76,7 @@ import Product from "./Product";
     {
       item: (
         <Product
+          id={7}
           typeOfProduct="pizza"
           title="MARGARITA"
           desc="Tomatsaus, fersk mozzarella og fersk basilikum."
@@ -80,6 +87,7 @@ import Product from "./Product";
     {
       item: (
         <Product
+          id={8}
           typeOfProduct="pizza"
           title="MARGARITA"
           desc="Tomatsaus, fersk mozzarella og fersk basilikum."
