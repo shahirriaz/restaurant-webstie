@@ -58,11 +58,26 @@ h5 {
   max-width: 240px;
 }
 
+@media only screen and (max-width: 1400px) {
+  .about{
+    height: 130vw;
+  } 
+
+  .about__container {
+    max-width: 600px;
+  }
+
+}
+
 @media only screen and (max-width: 1200px) {
   .about__container {
     position: relative;
-    max-width: 550px;
+    max-width: 650px;
     left: -20vh;
+  }
+
+  .about {
+    height: 162VW;
   }
 
   h1 {
@@ -80,23 +95,28 @@ h5 {
 }
 
 @media only screen and (min-width: 1200px) {
-  .about __container {
-    width: 90%;
-  }
-}
-
-@media only screen and (max-width: 1024px) {
   .about__container {
-    position: relative;
-    max-width: 350px;
-    left: -140px;
+    width: 90%;
+    max-width: 850px;
   }
 
   .contact__info {
-    bottom: 176vh;
-    margin-left: 50px;
-    width: 250px;
+    font-size: 0.1rem;
+
   }
+
+}
+
+@media only screen and (max-width: 1024px) {
+
+  .about {
+    height: 300vw;
+  }
+
+  .about__container {
+    max-width: 650px;
+  }
+
 
   h5 {
     font-size: 1rem;
@@ -105,6 +125,8 @@ h5 {
   h3 {
     font-size: 1.4rem;
   }
+
+
 }
 
 @media only screen and (max-width: 500px) {
@@ -115,10 +137,14 @@ h5 {
     align-items: center;
   }
 
+  .about {
+    height: 750vw;
+  }
+
   .contact__info {
     position: relative;
-    bottom: 0;
-    left: -3vh;
+    top: 520vw;
+    left: -60vw;
     width: 300px;
   }
 
