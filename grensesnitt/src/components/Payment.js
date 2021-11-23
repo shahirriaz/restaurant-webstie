@@ -77,17 +77,19 @@ function Payment() {
             name="email"
             value={userDetails.email}
             onChange={handleChange}
-            placeholder="example@mail.com"
+            placeholder=" example@mail.com"
           />
           {errors.email && <p className="error">{errors.email}</p>}
           <label for="card"> Card details</label>
+          <i class="fas fa-credit-card"></i>
           <input
             type="text"
+            /*typo*/
             id="card-numer"
             name="cardNr"
             value={userDetails.cardNr}
             onChange={handleChange}
-            placeholder="&#xf09d; Card number"
+            placeholder="      Card number"
           />
           {errors.cardNr && <p className="error">{errors.cardNr}</p>}
 
@@ -98,7 +100,7 @@ function Payment() {
             name="expireDate"
             value={userDetails.expireDate}
             onChange={handleChange}
-            placeholder="MM/YY"
+            placeholder=" MM / YY"
           />
           {errors.expireDate && <p className="error">{errors.expireDate}</p>}
           <label for="security-code"> Security code</label>
@@ -108,7 +110,7 @@ function Payment() {
             name="securityCode"
             value={userDetails.securityCode}
             onChange={handleChange}
-            placeholder="CVC"
+            placeholder=" CVC"
           />
           {errors.securityCode && (
             <p className="error">{errors.securityCode}</p>

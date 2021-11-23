@@ -1,15 +1,15 @@
 import React from "react";
 import "../../App.css";
-import Payment from "../Payment";
+import YourOrder from "../YourOrder";
 import Footer from "../Footer";
 
-function Order() {
+function Cart() {
   return (
     <>
-      <Payment />
+      <YourOrder />
       <Footer />
     </>
   );
 }
 
-export default Order;
+export default Cart;
