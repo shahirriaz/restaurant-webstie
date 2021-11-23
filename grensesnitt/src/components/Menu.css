@@ -1,16 +1,24 @@
+:root {
+  --primary-background-color: #f2faf2;
+  --secondary-background-color: #ef3e36;
+  --primary-font-color: #2e282a;
+  --secondary-font-color: var(--secondary-font-color);
+  --extra-color: #5c5552;
+}
+
 .menu-container {
   position: relative;
-  height: 300vh;
+  height: 370vh;
   width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   object-fit: contain;
-  background-color: #f2faf2;
+  background-color: var(--primary-background-color);
 }
 
 .menu-container > h1 {
-  color: red;
+  color: var(secondary-background-color);
   font-size: 100px;
 }
 
@@ -37,15 +45,15 @@
 }
 
 .pizza-item button {
-  color: black;
-  border-color: red;
+  color: var(--primary-font-color);
+  border-color: var(--primary-font-color);
   margin-top: 1vw;
 }
 
 .pizza-item button:hover {
-  opacity: 70%;
-  background-color: red;
-  color: #fff;
+  opacity: 80%;
+  background-color: var(--secondary-background-color);
+  color: var(--secondary-font-color);
 }
 
 .pasta-header {
@@ -70,15 +78,15 @@
 }
 
 .pasta-item button {
-  color: black;
-  border-color: red;
+  color: var(--primary-font-color);
+  border-color: var(--primary-font-color);
   margin-top: 1vw;
 }
 
 .pasta-item button:hover {
-  opacity: 70%;
-  background-color: red;
-  color: #fff;
+  opacity: 80%;
+  background-color: var(--secondary-background-color);
+  color: var(--secondary-font-color);
 }
 
 .menu-btns {

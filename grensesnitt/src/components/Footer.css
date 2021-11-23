@@ -1,10 +1,19 @@
+:root {
+  --primary-background-color: #f2faf2;
+  --secondary-background-color: #ef3e36;
+  --primary-font-color: #2e282a;
+  --secondary-font-color: #fff;
+  --extra-color: #5c5552;
+}
+
 .footer-container {
-  background-color: rgb(209, 42, 42);
+  background-color: var(--secondary-background-color);
   padding: 2rem 0 2rem 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  z-index: 999;
 }
 
 #footer-logo {
@@ -20,7 +29,7 @@
 
   margin-bottom: 4px;
   padding: 24px;
-  color: #fff;
+  color: var(--secondary-font-color);
 }
 
 .footer-subscription > p {
@@ -46,7 +55,7 @@
   border: none;
   font-size: 18px;
   margin-bottom: 16px;
-  border: 1px solid #fff;
+  border: 1px solid var(--secondary-font-color);
 }
 
 .footer-links {
@@ -75,18 +84,7 @@
 }
 
 .footer-link-items > h2 {
-  color: #fff;
-}
-
-.footer-link-items a {
-  color: #fff;
-  text-decoration: none;
-  margin-bottom: 0.5rem;
-}
-
-.footer-link-items a:hover {
-  color: #e9e9e9;
-  transition: 0.3s ease-out;
+  color: var(--secondary-font-color);
 }
 
 .footer-email-form h2 {
@@ -94,12 +92,11 @@
 }
 
 .footer-input::placeholder {
-  color: #b1b1b1;
+  color: var(--extra-color);
 }
 
-/* Social Icons */
 .social-icon-link {
-  color: #fff;
+  color: var(--secondary-font-color);
   font-size: 24px;
 }
 
@@ -125,7 +122,7 @@
 }
 
 .social-logo {
-  color: #fff;
+  color: var(--secondary-font-color);
   justify-self: start;
   margin-left: 20px;
   cursor: pointer;
@@ -137,7 +134,7 @@
 }
 
 .website-rights {
-  color: #fff;
+  color: var(--secondary-font-color);
   margin-bottom: 16px;
 }
 

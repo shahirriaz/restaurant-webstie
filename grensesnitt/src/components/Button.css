@@ -1,5 +1,9 @@
 :root {
-  --primary: #fff;
+  --primary-background-color: #f2faf2;
+  --secondary-background-color: #ef3e36;
+  --primary-font-color: #2e282a;
+  --secondary-font-color: #fff;
+  --extra-color: #5c5552;
 }
 
 .btn {
@@ -11,16 +15,16 @@
 }
 
 .btn--primary {
-  background-color: var(--primary);
+  background-color: var(--secondary-font-color);
   color: #242424;
-  border: 1px solid var(--primary);
+  border: 1px solid var(--secondary-font-color);
 }
 
 .btn--outline {
   background-color: transparent;
-  color: #fff;
+  color: var(--secondary-font-color);
   padding: 8px 20px;
-  border: 1px solid var(--primary);
+  border: 1px solid var(--secondary-font-color);
   transition: all 0.3s ease-out;
 }
 
@@ -37,7 +41,7 @@
 .btn--large:hover,
 .btn--medium:hover {
   transition: all 0.3s ease-out;
-  background: #fff;
-  color: #242424;
+  background: var(--secondary-font-color);
+  color: var(--primary-font-color);
   transition: 250ms;
 }

@@ -1,5 +1,17 @@
+:root {
+  --primary-background-color: #f2faf2;
+  --secondary-background-color: #ef3e36;
+  --primary-font-color: #2e282a;
+  --secondary-font-color: #fff;
+  --extra-color: #5c5552;
+}
+
 .navbar {
-  background: linear-gradient(90deg, rgb(245, 67, 67) 0%, rgb(92, 12, 12) 100%);
+  background: linear-gradient(
+    90deg,
+    rgb(239, 62, 54) 10%,
+    rgb(46, 40, 42) 100%
+  );
   height: 120px;
   display: flex;
   justify-content: center;
@@ -57,7 +69,7 @@
 }
 
 .nav-links {
-  color: #fff;
+  color: var(--secondary-font-color);
   display: flex;
   align-items: center;
   text-decoration: none;
@@ -66,12 +78,12 @@
 }
 
 .nav-links:hover {
-  border-bottom: 4px solid #fff;
+  border-bottom: 4px solid var(--secondary-font-color);
   transition: all 0.2s ease-out;
 }
 
 .fa-bars {
-  color: #fff;
+  color: var(--secondary-font-color);
 }
 
 .nav-links-mobile {
@@ -84,7 +96,7 @@
 
 #cart-counter {
   font-size: 0.7vw;
-  background-color: #fff;
+  background-color: var(--secondary-font-color);
   color: red;
   border-radius: 50%;
   width: 1vw;
@@ -105,8 +117,6 @@
     width: 1.2vw;
   }
 }
-
-
 
 @media screen and (max-width: 1550px) {
   .navbar-container {
@@ -131,7 +141,6 @@
     font-size: 1.2vw;
     height: 1.5vw;
     width: 1.5vw;
-
   }
 }
 
@@ -154,7 +163,7 @@
   }
 
   .nav-menu.active {
-    background: #242222;
+    background: var(--primary-font-color);
     left: 0;
     opacity: 1;
     transition: all 0.5s ease;
@@ -169,8 +178,8 @@
   }
 
   .nav-links:hover {
-    background-color: #fff;
-    color: #242424;
+    background-color: var(--secondary-font-color);
+    color: var(--primary-font-color);
     border-radius: 0;
   }
 
@@ -192,7 +201,7 @@
   }
 
   .fa-times {
-    color: #fff;
+    color: var(--secondary-font-color);
     font-size: 2rem;
   }
 
@@ -205,15 +214,15 @@
     text-decoration: none;
     font-size: 1.5rem;
     background-color: transparent;
-    color: #fff;
+    color: var(--secondary-font-color);
     padding: 14px 20px;
-    border: 1px solid #fff;
+    border: 1px solid var(--secondary-font-color);
     transition: all 0.3s ease-out;
   }
 
   .nav-links-mobile:hover {
-    background: #fff;
-    color: #242424;
+    background: var(--secondary-font-color);
+    color: var(--primary-font-color);
     transition: 250ms;
   }
 }

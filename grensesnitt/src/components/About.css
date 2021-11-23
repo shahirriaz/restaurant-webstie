@@ -1,8 +1,16 @@
+:root {
+  --primary-background-color: #f2faf2;
+  --secondary-background-color: #ef3e36;
+  --primary-font-color: #2e282a;
+  --secondary-font-color: #fff;
+  --extra-color: #5c5552;
+}
+
 .about {
   display: flex;
   flex-direction: column;
   padding: 4rem;
-  background-color: #f2faf2;
+  background-color: var(--primary-background-color);
   height: 62vw;
 }
 
@@ -23,7 +31,7 @@
 h1 {
   text-align: start;
   font-size: 7rem;
-  color: red;
+  color: var(--secondary-background-color);
   max-width: 1100px;
 }
 
@@ -42,7 +50,7 @@ h4 {
   display: flex;
   flex-direction: column;
   align-items: start;
-  color: red;
+  color: var(--secondary-background-color);
   margin-left: 10vw;
   margin-right: 5vw;
 }
@@ -59,14 +67,13 @@ h5 {
 }
 
 @media only screen and (max-width: 1400px) {
-  .about{
+  .about {
     height: 130vw;
-  } 
+  }
 
   .about__container {
     max-width: 600px;
   }
-
 }
 
 @media only screen and (max-width: 1200px) {
@@ -77,7 +84,7 @@ h5 {
   }
 
   .about {
-    height: 162VW;
+    height: 162vw;
   }
 
   h1 {
@@ -102,13 +109,10 @@ h5 {
 
   .contact__info {
     font-size: 0.1rem;
-
   }
-
 }
 
 @media only screen and (max-width: 1024px) {
-
   .about {
     height: 300vw;
   }
@@ -117,7 +121,6 @@ h5 {
     max-width: 650px;
   }
 
-
   h5 {
     font-size: 1rem;
   }
@@ -125,8 +128,6 @@ h5 {
   h3 {
     font-size: 1.4rem;
   }
-
-
 }
 
 @media only screen and (max-width: 500px) {

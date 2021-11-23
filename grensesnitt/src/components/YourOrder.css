@@ -1,7 +1,15 @@
+:root {
+  --primary-background-color: #f2faf2;
+  --secondary-background-color: #ef3e36;
+  --primary-font-color: #2e282a;
+  --secondary-font-color: #fff;
+  --extra-color: #5c5552;
+}
+
 .confirmation-container {
   display: flex;
   width: 100vw;
-  background-color: #f2faf2;
+  background-color: var(--primary-background-color);
 }
 
 .summary-container {

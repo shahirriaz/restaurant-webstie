@@ -1,3 +1,11 @@
+:root {
+  --primary-background-color: #f2faf2;
+  --secondary-background-color: #ef3e36;
+  --primary-font-color: #2e282a;
+  --secondary-font-color: var(--secondary-font-color);
+  --extra-color: #5c5552;
+}
+
 video {
   object-fit: cover;
   width: 100%;
@@ -18,17 +26,17 @@ video {
 }
 
 .hero-container > h1 {
-  color: #fff;
+  color: var(--secondary-font-color);
   font-size: 100px;
   margin-top: -100px;
 }
 
 .hero-container > p {
   margin-top: 8px;
-  color: #fff;
+  color: var(--secondary-font-color);
   font-size: 32px;
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
-    'Lucida Sans', Arial, sans-serif;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
 }
 
 .hero-btns {
