@@ -5,7 +5,7 @@ import "./CartItems.css";
 import { Link } from "react-router-dom";
 import { useStateValue } from "../StateProvider";
 import CheckoutProduct from "./CheckoutProduct";
-import { getTotalPrice } from "../reducer";
+import FlipMove from "react-flip-move";
 
 function CartItems() {
   const [{ basket, cartTotalAmount }, dispatch] = useStateValue();
@@ -43,16 +43,19 @@ function CartItems() {
               <h4>PRICE</h4>
             </div>
           </div>
-
-          {basket.map((item, index) => (
-            <CheckoutProduct
-              key={index}
-              id={item.id}
-              title={item.title}
-              price={item.price}
-              cartQuantity={item.cartQuantity}
-            />
-          ))}
+          <FlipMove>
+            {basket.map((item, index) => (
+              <div>
+                <CheckoutProduct
+                  key={index}
+                  id={item.id}
+                  title={item.title}
+                  price={item.price}
+                  cartQuantity={item.cartQuantity}
+                />
+              </div>
+            ))}
+          </FlipMove>
         </>
       )}
       <div className="checkout">
