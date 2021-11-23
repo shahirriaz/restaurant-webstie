@@ -67,10 +67,6 @@ const reducer = (state, action) => {
             position: "bottom-left",
           }
         );
-        // return {
-        //   ...state,
-        //   basket: state.basket,
-        // };
       } else if (state.basket[itemIndex2].cartQuantity === 1) {
         const nextCartItems = state.basket.filter(
           (cartItem) => cartItem.id !== action.item.id
