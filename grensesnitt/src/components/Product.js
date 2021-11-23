@@ -21,13 +21,11 @@ function Product({ id, typeOfProduct, title, desc, price }) {
     // console.log("kk")
   };
 
-  
-
   return (
     <div className={`${typeOfProduct}-item`}>
-      <h3>{title}</h3>
+      <h4>{title}</h4>
       <p>{desc}</p>
-      <p>{price}</p>
+      <p>{price + ",-"}</p>
       <Button
         className="btns"
         buttonStyle="btn--outline"

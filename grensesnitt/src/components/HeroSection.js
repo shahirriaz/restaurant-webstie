@@ -12,23 +12,11 @@ const scrollToPizza = () => {
   });
 };
 
-/*
 const scrollToPasta = () => {
-  scroller.scrollTo("last-pizza-item", {
+  scroller.scrollTo("end-pizza", {
     duration: 800,
     delay: 0,
     smooth: "easeInOutQuart",
-  });
-};
-*/
-
-// bad solution, but works atm.
-const scrollToPasta = () => {
-  window.scrollTo({
-    top: 3300,
-    behavior: "smooth",
-    /* you can also use 'auto' behaviour
-       in place of 'smooth' */
   });
 };
 

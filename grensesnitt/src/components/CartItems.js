@@ -67,7 +67,7 @@ function CartItems() {
               buttonSize="btn--large"
             >
               {/* <span>CHECKOUT - Total kr {getTotalPrice(basket)}-,</span> */}
-              <span>CHECKOUT - Total kr {cartTotalAmount}-,</span>
+              <span>CHECKOUT - Total kr {cartTotalAmount},-</span>
             </Button>
           </Link>
           <Button

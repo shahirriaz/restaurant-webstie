@@ -18,7 +18,7 @@
   flex-direction: column;
   align-items: flex-start;
   padding: 2vh 2vh;
-  font-family: "Helvetica", FontAwesome, sans-serif;
+  font-family: "Roboto", sans-serif;
   width: 30vw;
 }
 
@@ -27,30 +27,29 @@
 }
 
 .summary-container > h1 {
-  font-family: "Helvetica", FontAwesome, sans-serif;
+  font-family: "Roboto", sans-serif;
   font-size: 2rem;
-  color: black;
-  /*margin: 4vh 1vh;*/
+  color: var(--primary-font-color);
 }
 
 .line {
   width: 20vw;
   height: 2px;
-  background-color: red;
+  background-color: var(--secondary-background-color);
   margin-bottom: 2vw;
   margin-top: -1vw;
 }
 
 .summary-container h3 {
-  font-family: "Helvetica", FontAwesome, sans-serif;
+  font-family: "Roboto", sans-serif;
   font-weight: 100;
   font-size: 1.5rem;
   margin-left: 0;
 }
 
 .confirmation-container button {
-  color: black;
-  border-color: red;
+  color: var(--primary-font-color);
+  border-color: var(--secondary-background-color);
   margin: 0.5vw 0;
   width: 400px;
 }
@@ -62,16 +61,13 @@
 
 .confirmation-container button:hover {
   opacity: 70%;
-  background-color: red;
-  color: #fff;
+  background-color: var(--secondary-background-color);
+  color: var(--secondary-font-color);
 }
 
 .error {
-  color: red;
+  color: var(--secondary-background-color);
   margin-bottom: 1rem;
-  /* border: 1px solid blue; */
-  /* padding-left: 1rem; */
   width: 100%;
-  /* margin-left: 4.5rem; */
   font-size: 0.8rem;
 }
