@@ -124,6 +124,12 @@ const reducer = (state, action) => {
         ...state,
         userDetails: action.userDetails,
       };
+      case "SUCCESS":
+        return {
+          ...state,
+          succeeded: action.succeeded,
+        };
+
 
     default:
       return state;

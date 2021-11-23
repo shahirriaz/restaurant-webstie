@@ -1,6 +1,9 @@
 const formValidation = (userDetails) => {
   let errors = {};
 
+    if (!userDetails.name) {
+      errors.name = "Name is required";
+    }
 
   if (!userDetails.email) {
     errors.email = "E-mail is required ";

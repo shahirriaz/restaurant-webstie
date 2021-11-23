@@ -4,13 +4,15 @@ import "../App.css";
 import { Button } from "./Button";
 import { useStateValue } from "../StateProvider";
 import formValidation from "./formValidation";
-import { Link } from "react-router-dom";
+import { useHistory } from "react-router-dom";
 
 function Payment() {
   const [{ cartTotalAmount }, dispatch] = useStateValue();
+  const history = useHistory();
 
   //User State
   const [userDetails, setUserDetails] = useState({
+    name: "",
     email: "",
     cardNr: "",
     expireDate: "",
@@ -24,6 +26,7 @@ function Payment() {
   };
 
   const [processing, setProcessing] = useState("");
+  const [succeeded, setSucceeded] = useState(false);
 
   //Form validation
   const [dataIsCorrect, setDataIsCorrect] = useState(false);
@@ -43,7 +46,6 @@ function Payment() {
   const handleChange = (e) => {
     name = e.target.name;
     value = e.target.value;
-    console.log(value);
 
     setUserDetails({
       ...userDetails,
@@ -56,14 +58,25 @@ function Payment() {
       setProcessing(true);
       dispatch({
         type: "MAP_USER",
-        useDetails: userDetails,
+        userDetails: userDetails,
       });
     }
-
-    if (processing) {
-      alert("Take me to Your Orders page");
-    }
   }, [errors]);
+
+  useEffect(() => {
+    if (processing) {
+      setTimeout(() => {
+        setProcessing(false);
+        setSucceeded(true);
+        history.replace("/summary");
+      }, 3000);
+    }
+
+    dispatch({
+      type: "SUCCESS",
+      succeeded: succeeded,
+    });
+  }, [processing]);
 
   return (
     <div className="container">
@@ -71,6 +84,17 @@ function Payment() {
         <h1>Payment Details</h1>
         <p>Complete your purchase by providing you payment details.</p>
         <div className="info">
+          <label for="email"> Name</label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            value={userDetails.name}
+            onChange={handleChange}
+            placeholder=" John"
+          />
+          {errors.name && <p className="error">{errors.name}</p>}
+
           <label for="email"> Email address</label>
           <input
             type="text"
@@ -138,16 +162,17 @@ function Payment() {
             {cartTotalAmount + calculateMVA(cartTotalAmount)},-
           </h3>
         </div>
-        <Link to="/Summary">
-          <Button
-            className="btns"
-            buttonStyle="btn--outline"
-            buttonSize="btn--large"
-            onClick={handleSubmit}
-          >
-            Pay {cartTotalAmount + calculateMVA(cartTotalAmount)},-
-          </Button>
-        </Link>
+        <Button
+          className="btns"
+          buttonStyle="btn--outline"
+          buttonSize="btn--large"
+          onClick={handleSubmit}
+        >
+          {processing
+            ? "Processing"
+            : `Pay ${cartTotalAmount + calculateMVA(cartTotalAmount)},-`}
+        </Button>
+
       </div>
     </div>
   );
