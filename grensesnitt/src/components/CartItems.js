@@ -58,26 +58,30 @@ function CartItems() {
           </FlipMove>
         </>
       )}
-      <div className="checkout">
-        <Link to="/Order">
+      {cartTotalAmount > 0 ? (
+        <div className="checkout">
+          <Link to="/Order">
+            <Button
+              className="btns"
+              buttonStyle="btn--outline"
+              buttonSize="btn--large"
+            >
+              {/* <span>CHECKOUT - Total kr {getTotalPrice(basket)}-,</span> */}
+              <span>CHECKOUT - Total kr {cartTotalAmount}-,</span>
+            </Button>
+          </Link>
           <Button
             className="btns"
             buttonStyle="btn--outline"
             buttonSize="btn--large"
+            onClick={clearBasket}
           >
-            {/* <span>CHECKOUT - Total kr {getTotalPrice(basket)}-,</span> */}
-            <span>CHECKOUT - Total kr {cartTotalAmount}-,</span>
+            <span>Clear basket</span>
           </Button>
-        </Link>
-        <Button
-          className="btns"
-          buttonStyle="btn--outline"
-          buttonSize="btn--large"
-          onClick={clearBasket}
-        >
-          <span>Clear basket</span>
-        </Button>
-      </div>
+        </div>
+      ) : (
+        ""
+      )}
     </div>
   );
 }
