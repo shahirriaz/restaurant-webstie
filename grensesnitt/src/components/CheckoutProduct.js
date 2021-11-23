@@ -19,8 +19,10 @@ function CheckoutProduct({ id, title, desc, price, cartQuantity }) {
   const decreaseBasket = () => {
     dispatch({
       type: "DECREASE",
-      id: id,
-      title: title,
+      item: {
+        id: id,
+        title: title,
+      },
     });
   };
 
@@ -39,27 +41,29 @@ function CheckoutProduct({ id, title, desc, price, cartQuantity }) {
 
   return (
     <>
-      <div className="cart-header-element">
-        <p className="cart-item">{title}</p>
-        <button onClick={removeFromBasket}>Remove</button>
-      </div>
-      <div className="cart-header-element">
-        <p className="cart-item">
-          <i
-            onClick={decreaseBasket}
-            style={{ paddingRight: "1rem" }}
-            class="fas fa-minus-square"
-          ></i>
-          {cartQuantity}
-          <i
-            onClick={increaseBasket}
-            style={{ paddingLeft: "1rem" }}
-            class="fas fa-plus-square"
-          ></i>
-        </p>
-      </div>
-      <div className="cart-header-element">
-        <p className="cart-item">{price * cartQuantity}</p>
+      <div className="list-product">
+        <div className="cart-header-element">
+          <p className="cart-item">{title}</p>
+          <button className="remove-btn" onClick={removeFromBasket}>Remove</button>
+        </div>
+        <div className="cart-header-element">
+          <p className="cart-item">
+            <i
+              onClick={decreaseBasket}
+              style={{ paddingRight: "1rem" }}
+              class="fas fa-minus-square"
+            ></i>
+            {cartQuantity}
+            <i
+              onClick={increaseBasket}
+              style={{ paddingLeft: "1rem" }}
+              class="fas fa-plus-square"
+            ></i>
+          </p>
+        </div>
+        <div className="cart-header-element">
+          <p className="cart-item">{price * cartQuantity}</p>
+        </div>
       </div>
     </>
   );

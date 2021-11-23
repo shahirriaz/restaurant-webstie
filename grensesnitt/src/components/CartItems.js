@@ -8,13 +8,14 @@ import CheckoutProduct from "./CheckoutProduct";
 import { getTotalPrice } from "../reducer";
 
 function CartItems() {
-  const [{ basket, cartTotalAmount, cartTotalQuantity }, dispatch] =
-    useStateValue();
+  const [{ basket, cartTotalAmount }, dispatch] = useStateValue();
 
   useEffect(() => {
     dispatch({
       type: "GET_TOTALS",
     });
+
+    // console.log("i ran")
   }, [basket]);
 
   const clearBasket = () => {
@@ -44,15 +45,13 @@ function CartItems() {
           </div>
 
           {basket.map((item, index) => (
-            <div className="list-product">
-              <CheckoutProduct
-                key={index}
-                id={item.id}
-                title={item.title}
-                price={item.price}
-                cartQuantity={item.cartQuantity}
-              />
-            </div>
+            <CheckoutProduct
+              key={index}
+              id={item.id}
+              title={item.title}
+              price={item.price}
+              cartQuantity={item.cartQuantity}
+            />
           ))}
         </>
       )}

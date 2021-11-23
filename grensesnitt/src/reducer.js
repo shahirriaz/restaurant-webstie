@@ -7,7 +7,6 @@ export const initialState = {
   userDetails: {},
 };
 
-
 const reducer = (state, action) => {
   console.log(action);
   switch (action.type) {
@@ -55,10 +54,12 @@ const reducer = (state, action) => {
       };
     case "DECREASE":
       const itemIndex2 = state.basket.findIndex(
-        (basketItem) => basketItem.id === action.id
+        (basketItem) => basketItem.id === action.item.id
       );
+
+      let updatedBasket4 = [...state.basket];
+
       if (state.basket[itemIndex2].cartQuantity > 1) {
-        // console.log("ueee");
         state.basket[itemIndex2].cartQuantity -= 1;
         toast.info(
           `Decreased ${action.title} cart quantity to ${state.basket[itemIndex2].cartQuantity}`,
@@ -66,25 +67,25 @@ const reducer = (state, action) => {
             position: "bottom-left",
           }
         );
-        return {
-          ...state,
-          basket: state.basket,
-        };
+        // return {
+        //   ...state,
+        //   basket: state.basket,
+        // };
       } else if (state.basket[itemIndex2].cartQuantity === 1) {
         const nextCartItems = state.basket.filter(
-          (cartItem) => cartItem.id !== action.id
+          (cartItem) => cartItem.id !== action.item.id
         );
 
-        state.basket = nextCartItems;
+        updatedBasket4 = nextCartItems;
 
-        toast.error(`Removed ${action.title} from your cart`, {
+        toast.error(`Removed ${action.item.title} from your cart`, {
           position: "bottom-left",
         });
-        return {
-          ...state,
-          basket: state.basket,
-        };
       }
+      return {
+        ...state,
+        basket: updatedBasket4,
+      };
     case "CLEAR_BASKET":
       state.basket = [];
       toast.error(`Cart cleared`, {
@@ -122,11 +123,11 @@ const reducer = (state, action) => {
         cartTotalAmount: state.cartTotalAmount,
       };
 
-      case "MAP_USER":
-        return {
-          ...state,
-          userDetails: action.userDetails,
-        };
+    case "MAP_USER":
+      return {
+        ...state,
+        userDetails: action.userDetails,
+      };
 
     default:
       return state;
