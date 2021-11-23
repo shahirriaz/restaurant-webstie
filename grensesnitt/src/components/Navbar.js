@@ -31,7 +31,7 @@ const scrollToAboutUs = () => {
 };
 
 function Navbar() {
-  const [{ basket }, dispatch] = useStateValue();
+  const [{ basket, cartTotalQuantity }, dispatch] = useStateValue();
 
   const [click, setClick] = useState(false);
   const [button, setButton] = useState(true);
@@ -83,7 +83,7 @@ function Navbar() {
                 onClick={(closeMobileMenu, scrollToTop)}
               >
                 <i class="fas fa-shopping-cart"></i>
-                <p id="cart-counter">{basket?.length}</p>
+                <p id="cart-counter">{cartTotalQuantity}</p>
               </Link>
             </li>
           </ul>

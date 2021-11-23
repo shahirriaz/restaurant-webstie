@@ -10,13 +10,13 @@ import "react-toastify/dist/ReactToastify.css";
 import { useStateValue } from "./StateProvider";
 
 function App() {
-  const [{ state }, dispatch] = useStateValue();
+  const [{ basket }, dispatch] = useStateValue();
 
   useEffect(() => {
     dispatch({
       type: "GET_TOTALS",
     });
-  }, []);
+  }, [basket]);
 
   return (
     <>
