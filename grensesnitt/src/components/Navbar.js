@@ -60,7 +60,10 @@ function Navbar() {
               <Link
                 to="/"
                 className="nav-links"
-                onClick={(closeMobileMenu, scrollToAboutUs)}
+                onClick={() => {
+                  closeMobileMenu();
+                  scrollToAboutUs();
+                }}
               >
                 OM OSS
               </Link>
@@ -69,7 +72,10 @@ function Navbar() {
               <Link
                 to="/"
                 className="nav-links"
-                onClick={(closeMobileMenu, scrollToMenu)}
+                onClick={() => {
+                  closeMobileMenu();
+                  scrollToMenu();
+                }}
               >
                 MENY
               </Link>
@@ -78,14 +84,23 @@ function Navbar() {
               <Link
                 to="/cart"
                 className="nav-links"
-                onClick={(closeMobileMenu, scrollToTop)}
+                onClick={() => {
+                  closeMobileMenu();
+                  scrollToTop();
+                }}
               >
                 <i class="fas fa-shopping-cart"></i>
                 <p id="cart-counter">{cartTotalQuantity}</p>
               </Link>
             </li>
           </ul>
-          <Link to="/" onClick={(closeMobileMenu, scrollToTop)}>
+          <Link
+            to="/"
+            onClick={() => {
+              closeMobileMenu();
+              scrollToTop();
+            }}
+          >
             <img
               src="images/pizzeria_bella.png"
               id="logo"
