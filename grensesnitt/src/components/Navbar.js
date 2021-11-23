@@ -109,7 +109,10 @@ function Navbar() {
               </Link>
             </li>
           </ul>
-          {button && <Button buttonStyle="btn--outline">BESTILL</Button>}
+          <Link to="/Order">
+            {" "}
+            {button && <Button buttonStyle="btn--outline">BESTILL</Button>}{" "}
+          </Link>
         </div>
       </nav>
     </>

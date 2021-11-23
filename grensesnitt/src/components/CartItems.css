@@ -32,19 +32,18 @@
 }
 
 .checkout {
-  margin-left: 50rem;
+  margin: 10vw auto;
 }
 
 .checkout button {
-  position: relative;
-  top: 1vw;
   color: black;
-  /* border-color: red; */
+  border-color: red;
+  margin-right: 0.2vw;
 }
 
 .checkout button:hover {
   opacity: 70%;
-  /* background-color: red; */
+  background-color: red;
   color: #fff;
 }
 
