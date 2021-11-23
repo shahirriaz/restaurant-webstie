@@ -4,6 +4,7 @@ import "../App.css";
 import { Button } from "./Button";
 import { useStateValue } from "../StateProvider";
 import formValidation from "./formValidation";
+import { Link } from "react-router-dom";
 
 function Payment() {
   const [{ cartTotalAmount }, dispatch] = useStateValue();
@@ -89,7 +90,7 @@ function Payment() {
             name="cardNr"
             value={userDetails.cardNr}
             onChange={handleChange}
-            placeholder="      Card number"
+            placeholder="  Card number"
           />
           {errors.cardNr && <p className="error">{errors.cardNr}</p>}
 
@@ -100,7 +101,7 @@ function Payment() {
             name="expireDate"
             value={userDetails.expireDate}
             onChange={handleChange}
-            placeholder=" MM / YY"
+            placeholder="MM / YY"
           />
           {errors.expireDate && <p className="error">{errors.expireDate}</p>}
           <label for="security-code"> Security code</label>
@@ -110,7 +111,7 @@ function Payment() {
             name="securityCode"
             value={userDetails.securityCode}
             onChange={handleChange}
-            placeholder=" CVC"
+            placeholder="CVC"
           />
           {errors.securityCode && (
             <p className="error">{errors.securityCode}</p>
@@ -137,14 +138,16 @@ function Payment() {
             {cartTotalAmount + calculateMVA(cartTotalAmount)},-
           </h3>
         </div>
-        <Button
-          className="btns"
-          buttonStyle="btn--outline"
-          buttonSize="btn--large"
-          onClick={handleSubmit}
-        >
-          Pay {cartTotalAmount + calculateMVA(cartTotalAmount)},-
-        </Button>
+        <Link to="/Summary">
+          <Button
+            className="btns"
+            buttonStyle="btn--outline"
+            buttonSize="btn--large"
+            onClick={handleSubmit}
+          >
+            Pay {cartTotalAmount + calculateMVA(cartTotalAmount)},-
+          </Button>
+        </Link>
       </div>
     </div>
   );

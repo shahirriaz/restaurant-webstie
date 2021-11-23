@@ -1,8 +1,16 @@
+:root {
+  --primary-background-color: #f2faf2;
+  --secondary-background-color: #ef3e36;
+  --primary-font-color: #2e282a;
+  --secondary-font-color: #fff;
+  --extra-color: #5c5552;
+}
+
 .container {
   display: flex;
   flex-direction: column;
   width: 100vw;
-  background-color: #f2faf2;
+  background-color: var(--primary-background-color);
 }
 
 .flex-container {
@@ -10,40 +18,45 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  font-family: "Helvetica", FontAwesome, sans-serif;
+  font-family: "Roboto", sans-serif;
   width: 30vw;
 }
 
 .flex-container > h1 {
-  font-family: "Helvetica", FontAwesome, sans-serif;
+  font-family: "Roboto", sans-serif;
   font-size: 3rem;
-  color: black;
+  color: var(--primary-font-color);
   margin-bottom: 1vh;
 }
 
 .flex-container > p {
-  font-family: "Helvetica", FontAwesome, sans-serif;
+  font-family: "Roboto", sans-serif;
   margin-bottom: 5vh;
 
   font-size: 1rem;
 }
 
 .flex-container h3 {
-  font-family: "Helvetica", FontAwesome, sans-serif;
+  font-family: "Roboto", sans-serif;
   font-weight: 100;
   font-size: 1rem;
 }
 
+::placeholder {
+  color: var(--extra-color);
+}
+
 .fa-credit-card {
   position: relative;
-  top: 5vh;
-  margin-left: 1vh;
-  color: #636c72;
+  top: 4.8vh;
+  margin-left: 2vh;
+  color: var(--extra-color);
+  width: 1vw;
 }
 
 input {
   border-radius: 5px;
-  border: 1px solid black;
+  border: 1px solid var(--primary-font-color);
 }
 
 .total {
@@ -62,14 +75,14 @@ input {
 }
 
 .info label {
-  font-family: "Helvetica", FontAwesome, sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 
 .info input {
-  font-family: "Helvetica", FontAwesome, sans-serif;
+  font-family: "Roboto", sans-serif;
   width: 25vh;
   height: 4vh;
-  text-align: start;
+  text-align: center;
   font-size: 1.2rem;
 }
 
@@ -89,25 +102,22 @@ input {
 }
 
 .container button {
-  color: black;
-  border-color: red;
+  color: var(--primary-font-color);
+  border-color: var(--secondary-background-color);
   margin-top: 1vw;
   width: 230px;
 }
 
 .container button:hover {
   opacity: 70%;
-  background-color: red;
-  color: #fff;
+  background-color: var(--secondary-background-color);
+  color: var(--secondary-font-color);
 }
 
 .error {
-  color: red;
+  color: var(--secondary-background-color);
   margin-bottom: 1rem;
-  /* border: 1px solid blue; */
-  /* padding-left: 1rem; */
   width: 100%;
-  /* margin-left: 4.5rem; */
   font-size: 0.8rem;
 }
 
