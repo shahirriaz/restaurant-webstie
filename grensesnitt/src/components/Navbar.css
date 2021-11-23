@@ -28,11 +28,14 @@
   align-items: center;
   height: 80px;
   max-width: 1700px;
+  padding: 20px;
 }
 
 #logo {
   position: relative;
   width: 20vh;
+  margin-right: 30vw;
+  margin-left: 10vw;
 }
 
 #logo:hover {
@@ -42,29 +45,15 @@
 
 .nav-menu {
   display: grid;
-  grid-template-columns: repeat(6, auto);
+  grid-template-columns: repeat(5, auto);
   grid-gap: 10px;
   list-style: none;
   text-align: center;
   width: 60vw;
-  justify-content: end;
+  justify-content: start;
   margin-right: 2rem;
   margin-left: 2rem;
 }
-
-/*
-.nav-menu-2 {
-  display: grid;
-  grid-template-columns: repeat(3, auto);
-  grid-gap: 10px;
-  list-style: none;
-  text-align: center;
-  width: 60vw;
-  justify-content: end;
-  margin-right: 2rem;
-  margin-left: 2rem;
-}
-*/
 
 .nav-item {
   height: 80px;
@@ -130,6 +119,11 @@
     font-size: 1vw;
     height: 1.2vw;
     width: 1.2vw;
+  }
+
+  #logo {
+    margin-right: 20vw;
+    margin-left: 5vw;
   }
 }
 

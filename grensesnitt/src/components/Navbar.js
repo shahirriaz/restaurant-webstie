@@ -95,18 +95,6 @@ function Navbar() {
           <div className="menu-icon" onClick={handleClick}>
             <i className={click ? "fas fa-times" : "fas fa-bars"} />
           </div>
-          <ul className={click ? "nav-menu active" : "nav-menu"}>
-            <li className="nav-item">
-              <Link to="/" className="nav-links" onClick={closeMobileMenu}>
-                <i class="fab fa-instagram"></i>
-              </Link>
-            </li>
-            <li className="nav-item">
-              <Link to="/" className="nav-links" onClick={closeMobileMenu}>
-                <i class="fab fa-facebook"></i>
-              </Link>
-            </li>
-          </ul>
           <Link to="/Order">
             {" "}
             {button && <Button buttonStyle="btn--outline">BESTILL</Button>}{" "}
