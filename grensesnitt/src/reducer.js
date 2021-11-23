@@ -4,11 +4,9 @@ export const initialState = {
   basket: [],
   cartTotalQuantity: 0,
   cartTotalAmount: 0,
+  userDetails: {},
 };
 
-export const getTotalPrice = (basket) => {
-  return basket?.reduce((amount, item) => item.price + amount, 0);
-};
 
 const reducer = (state, action) => {
   console.log(action);
@@ -31,7 +29,7 @@ const reducer = (state, action) => {
       } else {
         const tempProduct = { ...action.item, cartQuantity: 1 };
         updatedBasket.push(tempProduct);
-        toast.success(`Added ${action.item.title} to cart`, {
+        toast.success(`Added ${action.item.title} to your cart`, {
           position: "bottom-left",
         });
       }
@@ -48,7 +46,7 @@ const reducer = (state, action) => {
 
       state.basket = nextCartItems;
 
-      toast.error(`Removed ${action.title} from cart`, {
+      toast.error(`Removed ${action.title} from your cart`, {
         position: "bottom-left",
       });
       return {
@@ -79,7 +77,7 @@ const reducer = (state, action) => {
 
         state.basket = nextCartItems;
 
-        toast.error(`Removed ${action.title} from cart`, {
+        toast.error(`Removed ${action.title} from your cart`, {
           position: "bottom-left",
         });
         return {
@@ -115,8 +113,6 @@ const reducer = (state, action) => {
         }
       );
 
-      console.log(total);
-
       state.cartTotalQuantity = quantity;
       state.cartTotalAmount = total;
 
@@ -125,6 +121,12 @@ const reducer = (state, action) => {
         cartTotalQuantity: state.cartTotalQuantity,
         cartTotalAmount: state.cartTotalAmount,
       };
+
+      case "MAP_USER":
+        return {
+          ...state,
+          userDetails: action.userDetails,
+        };
 
     default:
       return state;
