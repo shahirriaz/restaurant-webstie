@@ -9,8 +9,6 @@ const scrollToTop = () => {
   window.scrollTo({
     top: 0,
     behavior: "smooth",
-    /* you can also use 'auto' behaviour
-       in place of 'smooth' */
   });
 };
 
@@ -57,7 +55,7 @@ function Navbar() {
     <>
       <nav className="navbar">
         <div className="navbar-container">
-          <ul className={click ? "nav-menu-1 active" : "nav-menu-1"}>
+          <ul className={click ? "nav-menu active" : "nav-menu"}>
             <li className="nav-item">
               <Link
                 to="/"
@@ -97,7 +95,7 @@ function Navbar() {
           <div className="menu-icon" onClick={handleClick}>
             <i className={click ? "fas fa-times" : "fas fa-bars"} />
           </div>
-          <ul className={click ? "nav-menu-2 active" : "nav-menu-2"}>
+          <ul className={click ? "nav-menu active" : "nav-menu"}>
             <li className="nav-item">
               <Link to="/" className="nav-links" onClick={closeMobileMenu}>
                 <i class="fab fa-instagram"></i>
