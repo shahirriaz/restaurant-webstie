@@ -51,7 +51,7 @@
 .list-product {
   /* border: 1px solid blue; */
   display: flex;
-  width: 50%;
+  width: 900px; /*make this better, bad to use px, make it responsive*/
   justify-content: space-between;
 }
 

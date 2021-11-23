@@ -57,7 +57,7 @@ const reducer = (state, action) => {
         (basketItem) => basketItem.id === action.item.id
       );
 
-      let updatedBasket4 = [...state.basket];
+      let updatedBasket2 = [...state.basket];
 
       if (state.basket[itemIndex2].cartQuantity > 1) {
         state.basket[itemIndex2].cartQuantity -= 1;
@@ -67,16 +67,12 @@ const reducer = (state, action) => {
             position: "bottom-left",
           }
         );
-        // return {
-        //   ...state,
-        //   basket: state.basket,
-        // };
       } else if (state.basket[itemIndex2].cartQuantity === 1) {
         const nextCartItems = state.basket.filter(
           (cartItem) => cartItem.id !== action.item.id
         );
 
-        updatedBasket4 = nextCartItems;
+        updatedBasket2 = nextCartItems;
 
         toast.error(`Removed ${action.item.title} from your cart`, {
           position: "bottom-left",
@@ -84,7 +80,7 @@ const reducer = (state, action) => {
       }
       return {
         ...state,
-        basket: updatedBasket4,
+        basket: updatedBasket2,
       };
     case "CLEAR_BASKET":
       state.basket = [];
