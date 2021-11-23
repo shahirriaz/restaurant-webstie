@@ -7,6 +7,9 @@
 ### Objective
 * Case to solve: Pizzeria Bella online food ordering system
 
+### DEMO
+https://grensesnitt-7a7a4.web.app/
+
 ### Requirements
  * [x] Be able to present an overview of Pizz and Pasta products that you can order
  * [x] Be able to add products to shopping cart and present the total number of ordered items and total price

@@ -62,7 +62,7 @@ const reducer = (state, action) => {
       if (state.basket[itemIndex2].cartQuantity > 1) {
         state.basket[itemIndex2].cartQuantity -= 1;
         toast.info(
-          `Decreased ${action.title} cart quantity to ${state.basket[itemIndex2].cartQuantity}`,
+          `Decreased ${action.item.title} cart quantity to ${state.basket[itemIndex2].cartQuantity}`,
           {
             position: "bottom-left",
           }
