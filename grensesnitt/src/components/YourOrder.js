@@ -4,12 +4,11 @@ import "../App.css";
 import { Button } from "./Button";
 import { useStateValue } from "../StateProvider";
 import OrderedItems from "./OrderedItems";
+import { useHistory } from "react-router-dom";
 
 function YourOrder() {
-  const [
-    { cartTotalAmount, userDetails, basket },
-    dispatch,
-  ] = useStateValue();
+  const history = useHistory();
+  const [{ cartTotalAmount, userDetails, basket }, dispatch] = useStateValue();
   const { name } = userDetails;
 
   console.log(basket);
@@ -49,6 +48,7 @@ function YourOrder() {
           className="btns"
           buttonStyle="btn--outline"
           buttonSize="btn--large"
+          onClick={() => history.replace("/")}
         >
           Exit
         </Button>
