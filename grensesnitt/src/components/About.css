@@ -9,24 +9,20 @@
 .about {
   display: flex;
   flex-direction: column;
-  padding: 4rem;
+  align-items: center;
   background-color: var(--primary-background-color);
-  height: 62vw;
   font-family: Roboto sans-serif;
 }
 
 .about__container {
   position: relative;
   display: flex;
-  left: -200px;
-  flex-flow: column;
-  align-items: flex-end;
-  max-width: 1320px;
-  width: 90%;
-  height: 100vh;
-  margin: 10rem auto;
-  flex-wrap: wrap;
-  margin-left: 20vw;
+  width: 100%;
+  justify-content: space-evenly;
+  margin-top: 8rem;
+  padding: 2rem;
+  max-width: 2000px;
+  margin-bottom: 5rem;
 }
 
 h1 {
@@ -64,29 +60,22 @@ h5 {
   max-width: 240px;
 }
 
-@media only screen and (max-width: 1400px) {
-  .about {
-    height: 130vw;
+@media screen and (max-width: 1024px) {
+  h1 {
+    font-size: 4rem;
+  }
+  h5 {
+    font-size: 1rem;
   }
 
-  .about__container {
-    max-width: 600px;
+  h3 {
+    font-size: 1.4rem;
   }
 }
 
 @media only screen and (max-width: 1200px) {
   .about__container {
     position: relative;
-    max-width: 650px;
-    left: -20vh;
-  }
-
-  .about {
-    height: 162vw;
-  }
-
-  h1 {
-    font-size: 6rem;
   }
 
   h4 {
@@ -94,57 +83,38 @@ h5 {
   }
 
   .contact__info {
-    bottom: 113vh;
-    margin-left: 40px;
+    width: 100%;
+    display: flex;
+    align-items: center;
   }
 }
 
 @media only screen and (min-width: 1200px) {
-  .about__container {
-    width: 90%;
-    max-width: 850px;
-  }
-
   .contact__info {
     font-size: 0.1rem;
   }
 }
 
-@media only screen and (max-width: 1024px) {
-  .about {
-    height: 300vw;
-  }
-
-  .about__container {
-    max-width: 650px;
-  }
-
-  h5 {
-    font-size: 1rem;
-  }
-
-  h3 {
-    font-size: 1.4rem;
-  }
-}
 
 @media only screen and (max-width: 500px) {
+  .about {
+    padding: 0;
+  }
+
   .about__container {
     position: relative;
-    max-width: 250px;
-    left: -5vh;
     align-items: center;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
   }
-
-  .about {
-    height: 750vw;
-  }
-
   .contact__info {
     position: relative;
-    top: 520vw;
-    left: -60vw;
-    width: 300px;
+    margin: 0;
+    margin-bottom: 10rem;
+  }
+  .cards__text {
+    width: 100%;
   }
 
   h5 {
@@ -153,5 +123,8 @@ h5 {
 
   h3 {
     font-size: 1.4rem;
+  }
+  h1 {
+    font-size: 3rem;
   }
 }

@@ -132,3 +132,44 @@
     width: 100%;
   }
 }
+
+@media screen and (max-width: 500px) {
+  .pizza-item{
+    width: 100%;
+    /* border: 1px solid blue; */
+    align-items: center;
+  }
+
+  .pizza-container{
+    /* border: 10px solid red; */
+    display: flex;
+    flex-direction: column;
+  }
+
+  .pizza-item > p {
+    text-align: center;
+  }
+  .pasta-item{
+    width: 100%;
+    /* border: 1px solid blue; */
+    align-items: center;
+  }
+
+  .pasta-container{
+    /* border: 10px solid red; */
+    display: flex;
+    flex-direction: column;
+  }
+
+  .pasta-item > p {
+    text-align: center;
+  }
+    .pasta-item > h4 {
+    text-align: center;
+    padding-bottom: 1rem;
+  }
+
+  .end-pasta{
+    margin-bottom: 3rem;
+  }
+}

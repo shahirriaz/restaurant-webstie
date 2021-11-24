@@ -148,6 +148,7 @@ function Payment() {
             onChange={handleChange}
             id="zip"
             name="zip"
+            placeholder=" f.example 4085"
           />
           {errors.zip && <p className="error">{errors.zip}</p>}
         </div>
@@ -172,7 +173,6 @@ function Payment() {
             ? "Processing"
             : `Pay ${cartTotalAmount + calculateMVA(cartTotalAmount)},-`}
         </Button>
-
       </div>
     </div>
   );
