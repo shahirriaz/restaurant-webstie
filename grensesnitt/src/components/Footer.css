@@ -14,7 +14,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  z-index: 999;
+  z-index: 2;
   width: 100%;
   bottom: 0;
 }
@@ -163,4 +163,12 @@
 }
 
 @media screen and (max-width: 768px) {
+}
+
+@media screen and (max-width: 500px) {
+    /* .footer-container {
+    padding: 0;
+    position: fixed;
+    bottom: 0;
+  } */
 }

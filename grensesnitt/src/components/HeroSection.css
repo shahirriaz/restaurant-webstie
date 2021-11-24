@@ -76,3 +76,9 @@ video {
     width: 100%;
   }
 }
+
+@media screen and (max-width: 500px) {
+  .hero-container > h1 {
+    text-align: center;
+  }
+}

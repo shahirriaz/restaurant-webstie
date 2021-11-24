@@ -29,6 +29,7 @@ const scrollToAboutUs = () => {
 };
 
 function Navbar() {
+  const [width, setWidth] = useState(window.innerWidth);
   const [{ basket, cartTotalQuantity }, dispatch] = useStateValue();
 
   const [click, setClick] = useState(false);
@@ -36,6 +37,18 @@ function Navbar() {
 
   const handleClick = () => setClick(!click);
   const closeMobileMenu = () => setClick(false);
+
+  useEffect(() => {
+    const upDateWindowDimensions = () => {
+      const newWidth = window.innerWidth;
+      setWidth(newWidth);
+    };
+
+    window.addEventListener("resize", upDateWindowDimensions);
+    return () => {
+      window.removeEventListener("resize", upDateWindowDimensions);
+    };
+  }, [width]);
 
   const showButton = () => {
     if (window.innerWidth <= 960) {
@@ -90,6 +103,7 @@ function Navbar() {
                 }}
               >
                 <i class="fas fa-shopping-cart"></i>
+                {width < 960 ? cartTotalQuantity : ""}
                 <p id="cart-counter">{cartTotalQuantity}</p>
               </Link>
             </li>

@@ -249,6 +249,7 @@ function Menu() {
 
       <h1 className="pasta-header">PASTA</h1>
       <div className="pasta-container">{renderPastaItem()}</div>
+      <div className="end-pasta"></div>
     </div>
   );
 }

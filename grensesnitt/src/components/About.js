@@ -5,7 +5,7 @@ function About() {
   return (
     <div className="about">
       <div className="about__container">
-        <div cards__text>
+        <div className="cards__text">
           <h1>Pizzeria Bella åpnet i mars 2020</h1>
           <h4>
             Lorem ipsum dolor sit amet, consectetur adipisicing elit.

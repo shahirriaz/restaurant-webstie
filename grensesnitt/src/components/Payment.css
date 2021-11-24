@@ -32,14 +32,13 @@
 .flex-container > p {
   font-family: "Roboto", sans-serif;
   margin-bottom: 5vh;
-
   font-size: 1rem;
 }
 
 .flex-container h3 {
   font-family: "Roboto", sans-serif;
   font-weight: 100;
-  font-size: 1rem;
+  font-size: 1.2rem;
 }
 
 ::placeholder {
@@ -138,3 +137,35 @@ input {
     top: 3.8vh;
   }
 }
+
+@media (max-width: 500px) {
+  .flex-container {
+    width: 100%;
+    margin-bottom: 2rem;
+    padding: 1rem;
+  }
+  .flex-container > p {
+    text-align: center;
+  }
+  .info input {
+    width: 50vh;
+    height: 5vh;
+  }
+  .summary {
+    width: 100%;
+    justify-content: space-around;
+    padding-bottom: 1rem;
+  }
+}
+
+@media (max-width: 375px) {
+  .info input {
+    width: 40vh;
+  }
+  .flex-container > h1 {
+  font-size: 2rem;
+}
+
+
+}
+

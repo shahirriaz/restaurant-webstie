@@ -10,6 +10,8 @@
   display: flex;
   width: 100vw;
   background-color: var(--primary-background-color);
+  overflow: hidden;
+  /* border: 10px solid red; */
 }
 
 .summary-container {
@@ -19,7 +21,9 @@
   align-items: flex-start;
   padding: 2vh 2vh;
   font-family: "Roboto", sans-serif;
-  width: 30vw;
+  /* width: 30vw; */
+  overflow: hidden;
+  /* border: 10px solid blue; */
 }
 
 .greeting {
@@ -45,6 +49,7 @@
   font-weight: 100;
   font-size: 1.5rem;
   margin-left: 0;
+  margin-bottom: 1.1rem;
 }
 
 .confirmation-container button {
@@ -70,4 +75,27 @@
   margin-bottom: 1rem;
   width: 100%;
   font-size: 0.8rem;
+}
+
+@media screen and (min-width: 1024px) {
+  .summary-container {
+    width: 80%;
+    align-items: center;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .confirmation-container{
+      display: flex;
+      justify-content: center;
+  }
+  .summary-container {
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    margin: 8px;
+  }
+  .line {
+    width: 90%;
+  }
 }
