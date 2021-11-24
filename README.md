@@ -18,7 +18,6 @@ https://grensesnitt-7a7a4.web.app/
  * [x] Be able to navigate between web pages and edit your order before final order is placed
  * [x] Additional feature is to show notification when cart is updated
  * [x] Additional feature is to validate form when entering user details 
- __Strong text__ or **None of the functionalities requires backend**
 
 ### Website layout
 * Home page
