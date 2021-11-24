@@ -59,8 +59,8 @@
 }
 
 .pizza-item button:hover {
-  opacity: 80%;
-  background-color: var(--secondary-background-color);
+  opacity: 0.8;
+ background-color: var(--secondary-background-color);
   color: var(--secondary-font-color);
 }
 
@@ -93,7 +93,7 @@
 }
 
 .pasta-item button:hover {
-  opacity: 80%;
+  opacity: 0.8;
   background-color: var(--secondary-background-color);
   color: var(--secondary-font-color);
 }
